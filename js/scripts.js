@@ -30,13 +30,15 @@ $(document).ready(function () {
     console.log("updated cart: " + subtotalArray);
   });
 
-  $("ol").on("click", "li", function () {
+  $("ol").on("click", "span", function (event) {
     console.log("Prefade: " + subtotalArray);
-    $(this).fadeOut(250);
-    console.log("Post fade: " + subtotalArray);
-    // subtotalArray.remove(this);
-    // console.log("Post remove " + subtotalArray);
-
+    $(this).parent().fadeOut(300, function () {
+      console.log("Post fade: " + subtotalArray);
+      $(this).remove();
+      // subtotalArray.remove(this);
+      // console.log("Post remove " + subtotalArray);
+    })
+    event.stopPropagation();
   });
 
 
