@@ -9,7 +9,7 @@
 _This site is a Point-Of-Sale for a restaurant webpage meant to display the use of several key concepts including loops, arrays, DOM Manipulation, backend and frontend logic, responsive design, and more._
 
 ### Specs
-The webpage allows users to select different menu items to add to a "cart" where it can then be subtotaled and have a tax applied to it if applicable. The user is able to remove unwanted items to the cart, or put them back, if desired.
+The webpage allows users to select different menu items to add to a "cart" where it can then be subtotaled and have a tax applied to it if applicable. The user is able to remove unwanted items from the cart, or put them back, if desired.
 
 ## Setup/Installation Requirements
 
