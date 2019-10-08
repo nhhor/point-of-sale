@@ -45,7 +45,7 @@ $(document).ready(function () {
   $("#subtotalButton").click(function (event) {
     // alert("Subtotal Requested:");
     let subtotal = subtotalArray.reduce((a, b) => a + b).toPrecision(4);
-    $(".money").append("<li>" + "Subtotal - " + subtotal + "</li>");
+    $(".money").append("<li style='list-style-type: none';>" + "Subtotal - " + subtotal + "</li>");
     // let subtotal = subtotalArray.reduce((a, b) => a + b);
     console.log("Subtotal: " + subtotal);
   });
