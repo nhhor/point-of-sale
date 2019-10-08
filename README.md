@@ -1,6 +1,6 @@
 # _Point-Of-Sale_
 
-#### _ Team Week Assignment for Epicodus_
+#### Team Week Assignment for Epicodus
 
 #### By _**Chris Sanchez, Noah Horwitz, and Doug Ardans II**_
 
@@ -14,7 +14,7 @@ The webpage allows users to select different menu items to add to a "cart" where
 ## Setup/Installation Requirements
 
 * Download and install a web browser
-* Open index.html in web browser
+* Open index.html in web browser\
 https://sanchito59.github.io/point-of-sale/
 
 ## Technologies Used
@@ -28,7 +28,7 @@ https://sanchito59.github.io/point-of-sale/
 
 ### License
 
-Copyright (c) 2019 ****_Chris Sanchez, Noah Horwitz, and Doug Ardans II_****
+Copyright (c) 2019 ****_Chris Sanchez, Noah Horwitz, and Doug Ardans II_****\
 https://sanchito59.github.io/point-of-sale/
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
