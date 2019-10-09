@@ -29,7 +29,7 @@
   </div>
   <div class="fluid m-4">
     <div class="row">
-      <div class="col-7">
+      <div class="col-12 col-sm-12 col-md-7 col-xl-8 mb-4 mb-sm-4 mb-lg-0">
         <div class="card border border-dark shadow-lg">
           <div class="card-header text-center text-white bg-warning">
             <h2 class="h4 my-1 mx-0 py-2">Menu</h2>
@@ -112,7 +112,7 @@
           </div>
         </div>
       </div>
-      <div class="col-5">
+      <div class="col-12 col-sm-12 col-md-5 col-xl-4">
         <div class="card shadow-lg border border-dark">
           <div class="card-header text-center bg-success text-white">
             <h2 class="h4 my-1 mx-0 py-2">Receipt</h2>
@@ -143,21 +143,27 @@
                   <p class="m-0 h5">$0.00</p>
                 </div>
               </div>
-              <div class="row py-2 m-0 h5">
+              <div class="row m-0 py-2 h5">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-9 m-0 text-center text-sm-center text-lg-right">
-                  <p class="m-0 h5" id="subtotalButton">Total:</p>
+                  <p class="m-0 h5"></p>Total:</p>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-3 m-0 text-center" id="total">
                   <p class="m-0 h5">$0.00</p>
                 </div>
               </div>
+
               <div class="row">
                 <div class="col-12 mr-4 mr-lg-5 text-center">
-                  <button class="btn btn-lg btn-secondary text-white h3 mr-4 mt-3">Reset</button>
-                  <button class="btn btn-lg btn-success text-white h3 mt-3" id="pay"><i
-                      class="fas fa-cash-register"></i>
-                    - Pay
-                  </button>
+                  <div class="row">
+                    <div class="col-12 col-sm-12 col-xl-6 order-first order-sm-first order-xl-last">
+                      <button class="btn btn-block btn-lg btn-success text-white h3 mt-3" id="pay"><i
+                          class="fas fa-cash-register"></i> -
+                        Pay</button>
+                    </div>
+                    <div class="col-12 col-sm-12 col-xl-6">
+                      <button class="btn btn-block btn-lg btn-secondary text-white h3 mr-4 mt-3">Reset</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -166,9 +172,9 @@
       </div>
     </div>
   </div>
-  <div class="footer fixed-bottom text-center">
-    <p>Developed and by <a href="https://github.com/sanchito59/">Chris Sanchez</a>, <a
-        href="https://github.com/Roadspill/">Doug Ardans</a>, and <a href="https://github.com/00noah/">Noah</a> &copy;
+  <div class="fluid bg-dark text-light text-center py-4 px-4 px-sm-0">
+    <p class="p-0 m-0">Developed and by <a href="https://github.com/sanchito59/">Chris Sanchez</a>, <a
+        href="https://github.com/Roadspill/">Doug Ardans</a>, and <a href="https://github.com/00noah/">Noah</a> | &copy;
       2019</p>
   </div>
 
