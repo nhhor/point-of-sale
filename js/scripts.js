@@ -90,7 +90,7 @@ $(document).ready(function() {
             //   } else if ($("li").hasClass("taco")) {
             //     subtotalArray - 1.99;
             //   }
-            // }); 
+            // });
             // None of this code seems to work, ideally it'd be checking to see if an element that was removed has the class of "burrito" or "taco," and if so it subtracts the hard-coded value from the array. Not entirely sure what the best option is for removing specific values from an array in a list that could be seemingly unordered. I know (subtotal - 1.99) doesn't work but I'm not sure how to make the values interact
         })
         event.stopPropagation();
@@ -118,5 +118,5 @@ $(document).ready(function() {
         console.log("Reset tax total: " + taxedTotal);
         console.log("Reset tax amount: " + taxedAmount);
     });
-    // CHRIS, YES, IT MAY APPEAR like EACH OF THESE CLICK LISTENERS SHOULD BE IN-SET WITHIN EACHOTHER FOR THE SUBTOTAL FUNCTION TO WORK???
+// TEST
 });
