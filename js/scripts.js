@@ -96,8 +96,6 @@ $(document).ready(function() {
         event.stopPropagation();
     });
 
-
-
     $("#payButton").click(function(event) {
         let subtotal = subtotalArray.reduce((a, b) => a + b).toFixed(2);
         $("#subtotal").html("<p>" + "$" + subtotal + "</p>");
@@ -106,6 +104,19 @@ $(document).ready(function() {
         let taxedTotal = (subtotal * washingtonTax).toFixed(2);
         $("#total").html("<p>" + "$" + taxedTotal + "</p>");
         console.log("Subtotal: " + subtotal);
+    });
+    $("#resetButton").click(function(event) {
+        $("#subtotal").html("<p>" + "$0.00" + "</p>");
+        $("#taxes").html("<p>" + "$0.00" + "</p>");
+        $("#total").html("<p>" + "$0.00" + "</p>");
+        let subtotalArray = [0];
+        let subtotal = 0;
+        let taxedTotal = 0;
+        let taxedAmount = 0;
+        console.log("Reset subtotal array: " + subtotalArray);
+        console.log("Reset subtotal: " + subtotal);
+        console.log("Reset tax total: " + taxedTotal);
+        console.log("Reset tax amount: " + taxedAmount);
     });
     // CHRIS, YES, IT MAY APPEAR like EACH OF THESE CLICK LISTENERS SHOULD BE IN-SET WITHIN EACHOTHER FOR THE SUBTOTAL FUNCTION TO WORK???
 });
