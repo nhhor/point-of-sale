@@ -121,9 +121,9 @@ $(document).ready(function() {
       // RESET TOTALS:
       subtotalArray = [0]
       let subtotal = 0
-      $("#subtotal").html("<p>" + "$" + subtotal + "</p>");
+      $("#subtotal").html("<p>" + "$" + subtotal.toFixed(2) + "</p>");
       let taxedAmount = 0;
-      $("#taxes").html("<p>" + "$" + taxedAmount + "</p>");
+      $("#taxes").html("<p>" + "$" + taxedAmount.toFixed(2) + "</p>");
       let taxedTotal = (subtotal * washingtonTax).toFixed(2);
       $("#total").html("<p>" + "$" + taxedTotal + "</p>");
       console.log("subtotal array at reset: " + subtotalArray);
