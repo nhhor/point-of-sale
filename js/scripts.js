@@ -97,7 +97,7 @@ $(document).ready(function () {
   });
 
   $("#payButton").click(function (event) {
-    let subtotal = subtotalArray.reduce((a, b) => a + b).toPrecision(4);
+    let subtotal = subtotalArray.reduce((a, b) => a + b).toFixed(2);
     $("#subtotal").html("<p>" + "$" + subtotal + "</p>");
     console.log("Subtotal: " + subtotal);
   });
