@@ -106,7 +106,10 @@ $(document).ready(function () {
         $("#subtotal").html("<p>" + "$" + subtotal + "</p>");
         let taxedAmount = (subtotal * 0.1065).toFixed(2);
         $("#taxes").html("<p>" + "$" + taxedAmount + "</p>");
-        let taxedTotal = (subtotal * washingtonTax).toFixed(2);
+        console.log("Subtotal: " + subtotal);
+        console.log("Taxes: " + taxedAmount);
+        let taxedTotal = (parseFloat(subtotal) + parseFloat(taxedAmount));
+        console.log("Taxed total: " + taxedTotal);
         $("#total").html("<p>" + "$" + taxedTotal + "</p>");
         console.log("subtotal array at pay: " + subtotalArray);
     });
