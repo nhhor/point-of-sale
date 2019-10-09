@@ -8,19 +8,21 @@ let alPastorTacoPrice = 5.25;
 let beefChimicangaPrice = 6.99;
 let cheeseQuesadillaPrice = 4;
 let fruitasConChilePrice = 3.5;
+
 let californiaTax = 1.07250;
 let washingtonTax = 1.065;
 let oregonTax = 1.00;
 let idahoTax = 1.06;
+
 let subtotalArray = [0];
+let taxedTotal = 0;
+let taxedAmount = 0;
 let subtotal = 0;
-// let total = subtotal  // * STATE_tax;
 
 //Front-End Logic
 $(document).ready(function() {
     // let menuArray = [0]
 
-    // EVENTUALLY THESE WILL EACH HAVE THIER OWN IDS
     let caldoDeLenguaClick = $("#caldoDeLengua").click(function(food) {
         event.preventDefault();
         $(".items").append("<li class='.menuItem list-group-item' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Caldo de Lengua - " + "$" + caldoDeLenguaPrice + "</li>");
@@ -97,26 +99,31 @@ $(document).ready(function() {
     });
 
     $("#payButton").click(function(event) {
-        let subtotal = subtotalArray.reduce((a, b) => a + b).toFixed(2);
-        $("#subtotal").html("<p>" + "$" + subtotal + "</p>");
-        let taxedAmount = (subtotal * 0.1065).toFixed(2);
-        $("#taxes").html("<p>" + "$" + taxedAmount + "</p>");
-        let taxedTotal = (subtotal * washingtonTax).toFixed(2);
-        $("#total").html("<p>" + "$" + taxedTotal + "</p>");
-        console.log("Subtotal: " + subtotal);
+      event.preventDefault();
+      let subtotal = subtotalArray.reduce((a, b) => a + b).toFixed(2);
+      $("#subtotal").html("<p>" + "$" + subtotal + "</p>");
+      let taxedAmount = (subtotal * 0.1065).toFixed(2);
+      $("#taxes").html("<p>" + "$" + taxedAmount + "</p>");
+      let taxedTotal = (subtotal * washingtonTax).toFixed(2);
+      $("#total").html("<p>" + "$" + taxedTotal + "</p>");
+      console.log("subtotal array at pay: " + subtotalArray);
     });
+
     $("#resetButton").click(function(event) {
-        $("#subtotal").html("<p>" + "$0.00" + "</p>");
-        $("#taxes").html("<p>" + "$0.00" + "</p>");
-        $("#total").html("<p>" + "$0.00" + "</p>");
-        let subtotalArray = [0];
-        let subtotal = 0;
-        let taxedTotal = 0;
-        let taxedAmount = 0;
-        console.log("Reset subtotal array: " + subtotalArray);
-        console.log("Reset subtotal: " + subtotal);
-        console.log("Reset tax total: " + taxedTotal);
-        console.log("Reset tax amount: " + taxedAmount);
+      event.preventDefault();
+      // CLEAR (POSSIBLE) PREVIOUS ANSWERS IN UL:
+      var list = document.getElementById("receiptList");
+      while (list.hasChildNodes()) {
+        list.removeChild(list.firstChild);
+      };
+      // RESET TOTALS:
+      subtotalArray = [0]
+      let subtotal = 0
+      $("#subtotal").html("<p>" + "$" + subtotal + "</p>");
+      let taxedAmount = 0;
+      $("#taxes").html("<p>" + "$" + taxedAmount + "</p>");
+      let taxedTotal = (subtotal * washingtonTax).toFixed(2);
+      $("#total").html("<p>" + "$" + taxedTotal + "</p>");
+      console.log("subtotal array at reset: " + subtotalArray);
     });
-// TEST
 });
