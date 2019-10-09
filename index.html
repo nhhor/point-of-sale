@@ -27,41 +27,158 @@
       <h1>Food Cart POS</h1>
     </div>
   </div>
-  <div class="container p-0">
+  <div class="fluid m-4">
     <div class="row">
       <div class="col-7">
-        <div class="card">
-          <div class="card-header text-center ">
+        <div class="card border border-dark shadow-lg">
+          <div class="card-header text-center text-white bg-warning">
             <h2 class="h4 my-1 mx-0 py-2">Menu</h2>
-            <p id="tacoButton">[Taco Test]</p>
-            <p id="burritoButton">[Burrito Test]</p>
+          </div>
+          <div class="card-body p-3">
+            <div class="row">
+              <div class="col-12 col-sm-6 col-lg-3 mb-sm-4 mb-2">
+                <div class="card shadow border border-warning" id="tongueSoup">
+                  <img src="img/caldo_de_lengua.jpg" alt="Beef Tongue Soup - Lengua" class="card-img-top">
+                  <div class="card-body p-1 text-center">
+                    <div class="card-title  pt-2">Soup - Caldo de Lengua</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 mb-sm-4 mb-2">
+                <div class="card shadow border border-warning" id="beefSoup">
+                  <img src="img/caldo_de_res.jpg" alt="Beef Soup - Caldo de Res" class="card-img-top">
+                  <div class="card-body p-1 text-center">
+                    <div class="card-title  pt-2">Soup - Caldo de Res</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 mb-sm-4 mb-2">
+                <div class="card shadow border border-warning" id="chipsAndSalsa">
+                  <img src="img/chips_and_salsa.jpg" alt="Beef Tongue Soup - Caldo de Lengua" class="card-img-top">
+                  <div class="card-body p-1 text-center">
+                    <div class="card-title pt-2">Appetizer - Chips and Salsa</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 mb-sm-4 mb-2">
+                <div class="card shadow border border-warning" id="alPastorBurrito">
+                  <img src="img/al_pastor_burrito.jpg" alt="Al Pastor Burrito" class="card-img-top">
+                  <div class="card-body p-1 text-center">
+                    <div class="card-title  pt-2">Burrito - Al Pastor</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 mb-sm-4 mb-2">
+                <div class="card shadow border border-warning" id="beefEnchilada">
+                  <img src="img/beef_enchilada.jpg" alt="Beef Enchilada" class="card-img-top">
+                  <div class="card-body p-1 text-center">
+                    <div class="card-title  pt-2">Beef Enchilada</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 mb-sm-4 mb-2">
+                <div class="card shadow border border-warning" id="alPastorTaco">
+                  <img src="img/taco.jpg" alt="Al Pastor Taco" class="card-img-top">
+                  <div class="card-body p-1 text-center">
+                    <div class="card-title  pt-2">Al Pastor Taco</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 mb-sm-4 mb-2">
+                <div class="card shadow border border-warning" id="beefChimichanga">
+                  <img src="img/chimichanga.jpg" alt="Beef Chimichangas" class="card-img-top">
+                  <div class="card-body p-1 text-center">
+                    <div class="card-title  pt-2">Beef Chimichangas</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 mb-sm-4 mb-2">
+                <div class="card shadow border border-warning" id="cheeseQuesadilla">
+                  <img src="img/cheese_quesadilla.jpg" alt="Cheese Quesadilla" class="card-img-top">
+                  <div class="card-body p-1 text-center">
+                    <div class="card-title  pt-2">Cheese Quesadilla</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-3 mb-sm-4 mb-2">
+                <div class="card shadow border border-warning" id="frutasConChile">
+                  <img src="img/frutas_con_chile.jpg" alt="Frutas Con Chile" class="card-img-top">
+                  <div class="card-body p-1 text-center">
+                    <div class="card-title  pt-2">Fruitas Con Chile</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="col-5">
-        <div class="card">
-          <div class="card-header text-center">
+        <div class="card shadow-lg border border-dark">
+          <div class="card-header text-center bg-success text-white">
             <h2 class="h4 my-1 mx-0 py-2">Receipt</h2>
-            <!-- (THIS IS temp FOR ARRAY PUSH TESTING -NHH) -->
-            <ol class="items">Items:</ol>
+          </div>
+          <div class="card-body p-0">
+            <div class="card-title pl-4 pt-4 h4">Items:</div>
+            <ul class="list-group list-group-flush ml-5">
+              <li class="list-group-item items">Cras justo odio</li>
+              <li class="list-group-item items">Dapibus ac facilisis in</li>
+              <li class="list-group-item items">Vestibulum at eros</li>
+            </ul>
             <HR>
             </HR>
-            <p id="subtotalButton"><i class="fas fa-cash-register"></i> [SUBTOTAL]</p>
-            <ol class="money">Money:</ol>
-
+            <div class="card-footer border-top border-dark">
+              <div class="row m-0 py-2 h5">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-9 m-0 text-center text-sm-center text-lg-right">
+                  <p class="m-0 h5"></p>Subtotal:</p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-3 m-0 text-center" id="subtotal">
+                  <p class="m-0 h5">$0.00</p>
+                </div>
+              </div>
+              <div class="row m-0 py-2 h5">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-9 m-0 text-center text-sm-center text-lg-right">
+                  <p class="m-0 h5"></p>Taxes (WA - Vancouver):</p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-3 m-0 text-center" id="taxes">
+                  <p class="m-0 h5">$0.00</p>
+                </div>
+              </div>
+              <div class="row py-2 m-0 h5">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-9 m-0 text-center text-sm-center text-lg-right">
+                  <p class="m-0 h5" id="subtotalButton">Total:</p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-3 m-0 text-center" id="total">
+                  <p class="m-0 h5">$0.00</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 mr-4 mr-lg-5 text-center">
+                  <button class="btn btn-lg btn-secondary text-white h3 mr-4 mt-3">Reset</button>
+                  <button class="btn btn-lg btn-success text-white h3 mt-3" id="pay"><i
+                      class="fas fa-cash-register"></i>
+                    - Pay
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="footer fixed-bottom text-center">
+    <p>Developed and by <a href="https://github.com/sanchito59/">Chris Sanchez</a>, <a
+        href="https://github.com/Roadspill/">Doug Ardans</a>, and <a href="https://github.com/00noah/">Noah</a> &copy;
+      2019</p>
+  </div>
 
   <!-- Bootstrap Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+  </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+  </script>
 </body>
 
 </html>
