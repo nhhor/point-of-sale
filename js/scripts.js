@@ -83,6 +83,8 @@ $(document).ready(function() {
         $(this).parent().fadeOut(300, function() {
             console.log("Post fade: " + subtotalArray);
             $(this).remove();
+            // POP BELOW ONLY REMOVES LAST ITEM OF LIST, THIS SHOULD BE CORRECTED ANOTHER DAY.
+            subtotalArray.pop();
 
             // subtotalArray.forEach(function(item) {
             //   console.log(subtotalArray);
@@ -94,7 +96,7 @@ $(document).ready(function() {
             //   }
             // });
             // None of this code seems to work, ideally it'd be checking to see if an element that was removed has the class of "burrito" or "taco," and if so it subtracts the hard-coded value from the array. Not entirely sure what the best option is for removing specific values from an array in a list that could be seemingly unordered. I know (subtotal - 1.99) doesn't work but I'm not sure how to make the values interact
-        })
+        });
         event.stopPropagation();
     });
 
