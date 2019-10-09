@@ -17,6 +17,10 @@ li:hover span {
     opacity: 1.0;
 }
 
+ol, .ml-5 {
+    margin-left: 15px!important;
+}
+
 li {
     line-height: 40px;
 }

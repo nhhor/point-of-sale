@@ -23,55 +23,55 @@ $(document).ready(function () {
   // EVENTUALLY THESE WILL EACH HAVE THIER OWN IDS
   let caldoDeLenguaClick = $("#caldoDeLengua").click(function (food) {
     event.preventDefault();
-    $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Caldo de Lengua - " + "$" + caldoDeLenguaPrice + "</li>");
+    $(".items").append("<li class='.menuItem list-group-item' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Caldo de Lengua - " + "$" + caldoDeLenguaPrice + "</li>");
     subtotalArray.push(caldoDeLenguaPrice);
     console.log("updated cart: " + subtotalArray);
   });
   let caldoDeResClick = $("#caldoDeRes").click(function (food) {
     event.preventDefault();
-    $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Caldo de Res - " + "$" + caldoDeResPrice + "</li>");
+    $(".items").append("<li class='.menuItem list-group-item' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Caldo de Res - " + "$" + caldoDeResPrice + "</li>");
     subtotalArray.push(caldoDeResPrice);
     console.log("updated cart: " + subtotalArray);
   });
   let chipsAndSalsaClick = $("#chipsAndSalsa").click(function (food) {
     event.preventDefault();
-    $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Chips and Salsa - " + "$" + chipsAndSalsaPrice + "</li>");
+    $(".items").append("<li class='.menuItem list-group-item' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Chips and Salsa - " + "$" + chipsAndSalsaPrice + "</li>");
     subtotalArray.push(chipsAndSalsaPrice);
     console.log("updated cart: " + subtotalArray);
   });
   let alPastorBurritoClick = $("#alPastorBurrito").click(function (food) {
     event.preventDefault();
-    $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "al Pastor Burrito - " + "$" + alPastorBurritoPrice + "</li>");
+    $(".items").append("<li class='.menuItem list-group-item' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "al Pastor Burrito - " + "$" + alPastorBurritoPrice + "</li>");
     subtotalArray.push(alPastorBurritoPrice);
     console.log("updated cart: " + subtotalArray);
   });
   let beefEnchiladaClick = $("#beefEnchilada").click(function (food) {
     event.preventDefault();
-    $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Beef Enchilada - " + "$" + beefEnchiladaPrice + "</li>");
+    $(".items").append("<li class='.menuItem list-group-item' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Beef Enchilada - " + "$" + beefEnchiladaPrice + "</li>");
     subtotalArray.push(beefEnchiladaPrice);
     console.log("updated cart: " + subtotalArray);
   });
   let alPastorTacoClick = $("#alPastorTaco").click(function (food) {
     event.preventDefault();
-    $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "al Pastor Taco - " + "$" + alPastorTacoPrice + "</li>");
+    $(".items").append("<li class='.menuItem list-group-item' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "al Pastor Taco - " + "$" + alPastorTacoPrice + "</li>");
     subtotalArray.push(alPastorTacoPrice);
     console.log("updated cart: " + subtotalArray);
   });
   let beefChimichangaClick = $("#beefChimichanga").click(function (food) {
     event.preventDefault();
-    $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Beef Chimichanga - " + "$" + beefChimicangaPrice + "</li>");
+    $(".items").append("<li class='.menuItem list-group-item' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Beef Chimichanga - " + "$" + beefChimicangaPrice + "</li>");
     subtotalArray.push(beefChimicangaPrice);
     console.log("updated cart: " + subtotalArray);
   });
   let cheeseQuesadillaClick = $("#cheeseQuesadilla").click(function (food) {
     event.preventDefault();
-    $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Cheese Quesadilla - " + "$" + cheeseQuesadillaPrice + "</li>");
+    $(".items").append("<li class='.menuItem list-group-item' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Cheese Quesadilla - " + "$" + cheeseQuesadillaPrice + "</li>");
     subtotalArray.push(cheeseQuesadillaPrice);
     console.log("updated cart: " + subtotalArray);
   });
   let frutasConChileClick = $("#frutasConChile").click(function (food) {
     event.preventDefault();
-    $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Frutas con Chile - " + "$" + fruitasConChilePrice + "</li>");
+    $(".items").append("<li class='.menuItem list-group-item' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Frutas con Chile - " + "$" + fruitasConChilePrice + "</li>");
     subtotalArray.push(fruitasConChilePrice);
     console.log("updated cart: " + subtotalArray);
   });
