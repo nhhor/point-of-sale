@@ -96,9 +96,9 @@ $(document).ready(function () {
     event.stopPropagation();
   });
 
-  $("#subtotalButton").click(function (event) {
+  $("#payButton").click(function (event) {
     let subtotal = subtotalArray.reduce((a, b) => a + b).toPrecision(4);
-    $(".money").append("<li style='list-style-type: none';>" + "Subtotal - " + subtotal + "</li>");
+    $("#subtotal").html("<p>" + "$" + subtotal + "</p>");
     console.log("Subtotal: " + subtotal);
   });
   // CHRIS, YES, IT MAY APPEAR like EACH OF THESE CLICK LISTENERS SHOULD BE IN-SET WITHIN EACHOTHER FOR THE SUBTOTAL FUNCTION TO WORK???
