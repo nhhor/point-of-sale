@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Hepta+Slab|Lato|Montserrat&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <title>Point-Of-Sale System</title>
 </head>
@@ -12,7 +14,7 @@
 <body>
     <div class="jumbotron jumbotron-fluid bg-primary p-4">
         <div class="container text-center text-white">
-            <h1>Food Cart POS</h1>
+            <h1>La Estufa Vieja POS</h1>
         </div>
     </div>
     <div class="fluid m-4">
@@ -26,7 +28,8 @@
                         <div class="row">
                             <div class="col-12 col-sm-6 col-lg-4 mb-sm-4 mb-2">
                                 <div class="card shadow border border-warning" id="caldoDeLengua">
-                                    <img src="img/caldo_de_lengua.jpg" alt="Beef Tongue Soup - Lengua" class="card-img-top">
+                                    <img src="img/caldo_de_lengua.jpg" alt="Beef Tongue Soup - Lengua"
+                                        class="card-img-top">
                                     <div class="card-body p-1 text-center">
                                         <div class="card-title  pt-2">Soup - Caldo de Lengua</div>
                                     </div>
@@ -42,7 +45,8 @@
                             </div>
                             <div class="col-12 col-sm-6 col-lg-4 mb-sm-4 mb-2">
                                 <div class="card shadow border border-warning" id="chipsAndSalsa">
-                                    <img src="img/chips_and_salsa.jpg" alt="Beef Tongue Soup - Caldo de Lengua" class="card-img-top">
+                                    <img src="img/chips_and_salsa.jpg" alt="Beef Tongue Soup - Caldo de Lengua"
+                                        class="card-img-top">
                                     <div class="card-body p-1 text-center">
                                         <div class="card-title pt-2">Appetizer - Chips and Salsa</div>
                                     </div>
@@ -92,7 +96,7 @@
                                 <div class="card shadow border border-warning" id="frutasConChile">
                                     <img src="img/frutas_con_chile.jpg" alt="Frutas Con Chile" class="card-img-top">
                                     <div class="card-body p-1 text-center">
-                                        <div class="card-title  pt-2">Fruitas Con Chile</div>
+                                        <div class="card-title  pt-2">Frutas con Chile</div>
                                     </div>
                                 </div>
                             </div>
@@ -100,19 +104,20 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-xl-4">
+            <div id="receipt" class="col-12 col-sm-12 col-md-6 col-xl-4">
                 <div class="card shadow-lg border border-dark">
                     <div class="card-header text-center bg-success text-white">
                         <h2 class="h4 my-1 mx-0 py-2">Receipt</h2>
                     </div>
                     <div class="card-body p-0">
                         <div class="card-title pl-4 pt-4 h4">Items:</div>
-                          <ol id="receiptList" class="list-group list-group-flush ml-5 items">
+                        <ol id="receiptList" class="list-group list-group-flush ml-5 items">
                         </ol>
                         <hr>
                         <div class="card-footer border-top border-dark">
                             <div class="row m-0 py-2 h5">
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-9 m-0 text-center text-sm-center text-lg-right">
+                                <div
+                                    class="col-12 col-sm-12 col-md-12 col-lg-9 m-0 text-center text-sm-center text-lg-right">
                                     <p class="m-0 h5">Subtotal:</p>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-3 m-0 text-center">
@@ -120,7 +125,8 @@
                                 </div>
                             </div>
                             <div class="row m-0 py-2 h5">
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-9 m-0 text-center text-sm-center text-lg-right">
+                                <div
+                                    class="col-12 col-sm-12 col-md-12 col-lg-9 m-0 text-center text-sm-center text-lg-right">
                                     <p class="m-0 h5">Taxes (WA - Vancouver):</p>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-3 m-0 text-center">
@@ -128,7 +134,8 @@
                                 </div>
                             </div>
                             <div class="row py-2 m-0 h5">
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-9 m-0 text-center text-sm-center text-lg-right">
+                                <div
+                                    class="col-12 col-sm-12 col-md-12 col-lg-9 m-0 text-center text-sm-center text-lg-right">
                                     <p class="m-0 h5">Total:</p>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-3 m-0 text-center" id="total">
@@ -138,8 +145,9 @@
                             <div class="row">
                                 <div class="col-12 mr-4 mr-lg-5 text-center">
                                     <button class="btn btn-lg btn-success text-white h3 mt-3" id="payButton"><i
-                      class="fas fa-cash-register"></i> - Pay </button>
-                                    <button class="btn btn-lg btn-secondary text-white h3 mr-4 mt-3" id="resetButton">Reset</button>
+                                            class="fas fa-cash-register"></i> - Pay </button>
+                                    <button class="btn btn-lg btn-secondary text-white h3 mr-4 mt-3"
+                                        id="resetButton">Reset</button>
                                 </div>
                             </div>
                         </div>
@@ -155,12 +163,15 @@
             <a href="https://github.com/00noah/">Noah</a> | &copy; 2019
         </p>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/837be73112.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
     <script src="js/scripts.js"></script>
 
 </body>
