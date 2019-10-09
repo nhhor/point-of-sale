@@ -1,4 +1,22 @@
-span:hover {
-    color: rgb(235, 45, 20);
+li span {
+    background-color: #e74c3c;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    width: 0px;
+    display: inline-block;
+    transition: 0.25s linear;
+    opacity: 0;
+}
+
+li:hover span {
+    color: white;
     font-weight: bold;
-  }
+    width: 40px;
+    opacity: 1.0;
+}
+
+li {
+    line-height: 40px;
+}

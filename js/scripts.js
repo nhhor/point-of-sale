@@ -1,6 +1,13 @@
 //Backend Logic
-let taco = 1.99;
-let burrito = 2.99
+let caldoDeLenguaPrice = 6.99;
+let caldoDeResPrice = 6.99;
+let chipsAndSalsaPrice = 4;
+let alPastorBurritoPrice = 7.5;
+let beefEnchiladaPrice = 6.99;
+let alPastorTacoPrice = 5.25;
+let beefChimicangaPrice = 6.99;
+let cheeseQuesadillaPrice = 4;
+let fruitasConChilePrice = 3.5;
 let californiaTax = 1.07250;
 let washingtonTax = 1.065;
 let oregonTax = 1.00;
@@ -14,18 +21,58 @@ $(document).ready(function () {
   // let menuArray = [0]
 
   // EVENTUALLY THESE WILL EACH HAVE THIER OWN IDS
-  let tacoClick = $("#tacoButton").click(function (food) {
+  let caldoDeLenguaClick = $("#caldoDeLengua").click(function (food) {
     event.preventDefault();
-    // alert("Taco added!");
-    $(".items").append("<li class='taco'><span> X </span>" + "Taco - " + taco + "</li>");
-    subtotalArray.push(taco);
+    $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Caldo de Lengua - " + "$" + caldoDeLenguaPrice + "</li>");
+    subtotalArray.push(caldoDeLenguaPrice);
     console.log("updated cart: " + subtotalArray);
   });
-  let burittoClick = $("#burritoButton").click(function (food) {
+  let caldoDeResClick = $("#caldoDeRes").click(function (food) {
     event.preventDefault();
-    // alert("Burrito added!");
-    $(".items").append("<li class='burrito'><span> X </span>" + "Burrito - " + burrito + "</li>");
-    subtotalArray.push(burrito);
+    $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Caldo de Res - " + "$" + caldoDeResPrice + "</li>");
+    subtotalArray.push(caldoDeResPrice);
+    console.log("updated cart: " + subtotalArray);
+  });
+  let chipsAndSalsaClick = $("#chipsAndSalsa").click(function (food) {
+    event.preventDefault();
+    $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Chips and Salsa - " + "$" + chipsAndSalsaPrice + "</li>");
+    subtotalArray.push(chipsAndSalsaPrice);
+    console.log("updated cart: " + subtotalArray);
+  });
+  let alPastorBurritoClick = $("#alPastorBurrito").click(function (food) {
+    event.preventDefault();
+    $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "al Pastor Burrito - " + "$" + alPastorBurritoPrice + "</li>");
+    subtotalArray.push(alPastorBurritoPrice);
+    console.log("updated cart: " + subtotalArray);
+  });
+  let beefEnchiladaClick = $("#beefEnchilada").click(function (food) {
+    event.preventDefault();
+    $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Beef Enchilada - " + "$" + beefEnchiladaPrice + "</li>");
+    subtotalArray.push(beefEnchiladaPrice);
+    console.log("updated cart: " + subtotalArray);
+  });
+  let alPastorTacoClick = $("#alPastorTaco").click(function (food) {
+    event.preventDefault();
+    $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "al Pastor Taco - " + "$" + alPastorTacoPrice + "</li>");
+    subtotalArray.push(alPastorTacoPrice);
+    console.log("updated cart: " + subtotalArray);
+  });
+  let beefChimichangaClick = $("#beefChimichanga").click(function (food) {
+    event.preventDefault();
+    $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Beef Chimichanga - " + "$" + beefChimicangaPrice + "</li>");
+    subtotalArray.push(beefChimicangaPrice);
+    console.log("updated cart: " + subtotalArray);
+  });
+  let cheeseQuesadillaClick = $("#cheeseQuesadilla").click(function (food) {
+    event.preventDefault();
+    $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Cheese Quesadilla - " + "$" + cheeseQuesadillaPrice + "</li>");
+    subtotalArray.push(cheeseQuesadillaPrice);
+    console.log("updated cart: " + subtotalArray);
+  });
+  let frutasConChileClick = $("#frutasConChile").click(function (food) {
+    event.preventDefault();
+    $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Frutas con Chile - " + "$" + fruitasConChilePrice + "</li>");
+    subtotalArray.push(fruitasConChilePrice);
     console.log("updated cart: " + subtotalArray);
   });
 
@@ -34,7 +81,6 @@ $(document).ready(function () {
     $(this).parent().fadeOut(300, function () {
       console.log("Post fade: " + subtotalArray);
       $(this).remove();
-
 
       // subtotalArray.forEach(function(item) {
       //   console.log(subtotalArray);
@@ -50,11 +96,10 @@ $(document).ready(function () {
     event.stopPropagation();
   });
 
-  $("#subtotalButton").click(function (event) {
+  $("#payButton").click(function (event) {
     let subtotal = subtotalArray.reduce((a, b) => a + b).toPrecision(4);
-    $(".money").append("<li style='list-style-type: none';>" + "Subtotal - " + subtotal + "</li>");
+    $("#subtotal").html("<p>" + "$" + subtotal + "</p>");
     console.log("Subtotal: " + subtotal);
   });
-
   // CHRIS, YES, IT MAY APPEAR like EACH OF THESE CLICK LISTENERS SHOULD BE IN-SET WITHIN EACHOTHER FOR THE SUBTOTAL FUNCTION TO WORK???
 });
