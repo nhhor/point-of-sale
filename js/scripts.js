@@ -8,19 +8,21 @@ let alPastorTacoPrice = 5.25;
 let beefChimicangaPrice = 6.99;
 let cheeseQuesadillaPrice = 4;
 let fruitasConChilePrice = 3.5;
+
 let californiaTax = 1.07250;
 let washingtonTax = 1.065;
 let oregonTax = 1.00;
 let idahoTax = 1.06;
+
 let subtotalArray = [0];
+let taxedTotal = 0;
+let taxedAmount = 0;
 let subtotal = 0;
-// let total = subtotal  // * STATE_tax;
 
 //Front-End Logic
 $(document).ready(function() {
     // let menuArray = [0]
 
-    // EVENTUALLY THESE WILL EACH HAVE THIER OWN IDS
     let caldoDeLenguaClick = $("#caldoDeLengua").click(function(food) {
         event.preventDefault();
         $(".items").append("<li class='.menuItem list-group-item' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Caldo de Lengua - " + "$" + caldoDeLenguaPrice + "</li>");
@@ -81,6 +83,8 @@ $(document).ready(function() {
         $(this).parent().fadeOut(300, function() {
             console.log("Post fade: " + subtotalArray);
             $(this).remove();
+            // POP BELOW ONLY REMOVES LAST ITEM OF LIST, THIS SHOULD BE CORRECTED ANOTHER DAY.
+            subtotalArray.pop();
 
             // subtotalArray.forEach(function(item) {
             //   console.log(subtotalArray);
@@ -90,33 +94,38 @@ $(document).ready(function() {
             //   } else if ($("li").hasClass("taco")) {
             //     subtotalArray - 1.99;
             //   }
-            // }); 
+            // });
             // None of this code seems to work, ideally it'd be checking to see if an element that was removed has the class of "burrito" or "taco," and if so it subtracts the hard-coded value from the array. Not entirely sure what the best option is for removing specific values from an array in a list that could be seemingly unordered. I know (subtotal - 1.99) doesn't work but I'm not sure how to make the values interact
-        })
+        });
         event.stopPropagation();
     });
 
     $("#payButton").click(function(event) {
-        let subtotal = subtotalArray.reduce((a, b) => a + b).toFixed(2);
-        $("#subtotal").html("<p>" + "$" + subtotal + "</p>");
-        let taxedAmount = (subtotal * 0.1065).toFixed(2);
-        $("#taxes").html("<p>" + "$" + taxedAmount + "</p>");
-        let taxedTotal = (subtotal * washingtonTax).toFixed(2);
-        $("#total").html("<p>" + "$" + taxedTotal + "</p>");
-        console.log("Subtotal: " + subtotal);
+      event.preventDefault();
+      let subtotal = subtotalArray.reduce((a, b) => a + b).toFixed(2);
+      $("#subtotal").html("<p>" + "$" + subtotal + "</p>");
+      let taxedAmount = (subtotal * 0.1065).toFixed(2);
+      $("#taxes").html("<p>" + "$" + taxedAmount + "</p>");
+      let taxedTotal = (subtotal * washingtonTax).toFixed(2);
+      $("#total").html("<p>" + "$" + taxedTotal + "</p>");
+      console.log("subtotal array at pay: " + subtotalArray);
     });
+
     $("#resetButton").click(function(event) {
-        $("#subtotal").html("<p>" + "$0.00" + "</p>");
-        $("#taxes").html("<p>" + "$0.00" + "</p>");
-        $("#total").html("<p>" + "$0.00" + "</p>");
-        let subtotalArray = [0];
-        let subtotal = 0;
-        let taxedTotal = 0;
-        let taxedAmount = 0;
-        console.log("Reset subtotal array: " + subtotalArray);
-        console.log("Reset subtotal: " + subtotal);
-        console.log("Reset tax total: " + taxedTotal);
-        console.log("Reset tax amount: " + taxedAmount);
+      event.preventDefault();
+      // CLEAR (POSSIBLE) PREVIOUS ANSWERS IN UL:
+      var list = document.getElementById("receiptList");
+      while (list.hasChildNodes()) {
+        list.removeChild(list.firstChild);
+      };
+      // RESET TOTALS:
+      subtotalArray = [0]
+      let subtotal = 0
+      $("#subtotal").html("<p>" + "$" + subtotal.toFixed(2) + "</p>");
+      let taxedAmount = 0;
+      $("#taxes").html("<p>" + "$" + taxedAmount.toFixed(2) + "</p>");
+      let taxedTotal = (subtotal * washingtonTax).toFixed(2);
+      $("#total").html("<p>" + "$" + taxedTotal + "</p>");
+      console.log("subtotal array at reset: " + subtotalArray);
     });
-    // CHRIS, YES, IT MAY APPEAR like EACH OF THESE CLICK LISTENERS SHOULD BE IN-SET WITHIN EACHOTHER FOR THE SUBTOTAL FUNCTION TO WORK???
 });
