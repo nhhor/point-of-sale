@@ -28,54 +28,72 @@ $(document).ready(function () {
         $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Caldo de Lengua - " + "$" + caldoDeLenguaPrice + "</li>");
         subtotalArray.push(caldoDeLenguaPrice);
         console.log("updated cart: " + subtotalArray);
+        $("#myModal").modal();
+
     });
     let caldoDeResClick = $("#caldoDeRes").click(function (food) {
         event.preventDefault();
         $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Caldo de Res - " + "$" + caldoDeResPrice + "</li>");
         subtotalArray.push(caldoDeResPrice);
         console.log("updated cart: " + subtotalArray);
+        $("#myModal").modal();
+
     });
     let chipsAndSalsaClick = $("#chipsAndSalsa").click(function (food) {
         event.preventDefault();
         $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Chips and Salsa - " + "$" + chipsAndSalsaPrice + "</li>");
         subtotalArray.push(chipsAndSalsaPrice);
         console.log("updated cart: " + subtotalArray);
+        $("#myModal").modal();
+
     });
     let alPastorBurritoClick = $("#alPastorBurrito").click(function (food) {
         event.preventDefault();
         $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "al Pastor Burrito - " + "$" + alPastorBurritoPrice + "</li>");
         subtotalArray.push(alPastorBurritoPrice);
         console.log("updated cart: " + subtotalArray);
+        $("#myModal").modal();
+
     });
     let beefEnchiladaClick = $("#beefEnchilada").click(function (food) {
         event.preventDefault();
         $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Beef Enchilada - " + "$" + beefEnchiladaPrice + "</li>");
         subtotalArray.push(beefEnchiladaPrice);
         console.log("updated cart: " + subtotalArray);
+        $("#myModal").modal();
+
     });
     let alPastorTacoClick = $("#alPastorTaco").click(function (food) {
         event.preventDefault();
         $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "al Pastor Taco - " + "$" + alPastorTacoPrice + "</li>");
         subtotalArray.push(alPastorTacoPrice);
         console.log("updated cart: " + subtotalArray);
+        $("#myModal").modal();
+
     });
     let beefChimichangaClick = $("#beefChimichanga").click(function (food) {
         event.preventDefault();
         $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Beef Chimichanga - " + "$" + beefChimicangaPrice + "</li>");
         subtotalArray.push(beefChimicangaPrice);
         console.log("updated cart: " + subtotalArray);
+        $("#myModal").modal();
+
     });
     let cheeseQuesadillaClick = $("#cheeseQuesadilla").click(function (food) {
         event.preventDefault();
         $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Cheese Quesadilla - " + "$" + cheeseQuesadillaPrice + "</li>");
         subtotalArray.push(cheeseQuesadillaPrice);
         console.log("updated cart: " + subtotalArray);
+        $("#myModal").modal();
+
     });
     let frutasConChileClick = $("#frutasConChile").click(function (food) {
         event.preventDefault();
         $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Frutas con Chile - " + "$" + fruitasConChilePrice + "</li>");
         subtotalArray.push(fruitasConChilePrice);
         console.log("updated cart: " + subtotalArray);
+        $("#myModal").modal();
+
     });
 
     $("ol").on("click", "span", function (event) {
@@ -112,7 +130,7 @@ $(document).ready(function () {
         console.log("Taxed total: " + taxedTotal);
         $("#total").html("<p>" + "$" + (taxedTotal.toFixed(2)) + "</p>");
         console.log("subtotal array at pay: " + subtotalArray);
-    });
+      });
 
     $("#resetButton").click(function (event) {
         event.preventDefault();

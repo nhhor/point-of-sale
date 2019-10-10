@@ -28,3 +28,7 @@ ol, .ml-5 {
 li {
     line-height: 40px;
 }
+
+.modal-header {
+  background-color: red;
+}
