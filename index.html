@@ -12,14 +12,14 @@
 </head>
 
 <body>
-    <div class="jumbotron jumbotron-fluid bg-primary p-4">
+    <div class="jumbotron jumbotron-fluid bg-danger p-4">
         <div class="container text-center text-white">
             <h1>La Estufa Vieja POS</h1>
         </div>
     </div>
     <div class="fluid m-4">
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 col-xl-8 mb-4 mb-sm-4 mb-lg-0">
+            <div class="col-12 col-sm-12 col-md-7 col-xl-8 mb-4 mb-sm-4 mb-lg-0">
                 <div class="card border border-dark shadow-lg">
                     <div class="card-header text-center text-white bg-warning">
                         <h2 class="h4 my-1 mx-0 py-2">Menu</h2>
@@ -104,16 +104,18 @@
                     </div>
                 </div>
             </div>
-            <div id="receipt" class="col-12 col-sm-12 col-md-6 col-xl-4">
+            <div id="receipt" class="col-12 col-sm-12 col-md-5 col-xl-4">
                 <div class="card shadow-lg border border-dark">
                     <div class="card-header text-center bg-success text-white">
                         <h2 class="h4 my-1 mx-0 py-2">Receipt</h2>
                     </div>
                     <div class="card-body p-0">
-                        <div class="card-title pl-4 pt-4 h4">Items:</div>
-                        <ol id="receiptList" class="list-group list-group-flush ml-5 items">
-                        </ol>
-                        <hr>
+                        <div class="card-title pl-lg-4 pt-4 h4 text-center text-lg-left">Items:</div>
+                        <div class="pb-4">
+                          <ol id="receiptList" class="list-group list-group-flush mr-xl-5 pr-xl-4 items text-left text-sm-left text-xl-right">
+                          </ol>
+                        </div>
+                        <!-- <hr> -->
                         <div class="card-footer border-top border-dark">
                             <div class="row m-0 py-2 h5">
                                 <div
