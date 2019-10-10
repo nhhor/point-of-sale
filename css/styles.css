@@ -29,6 +29,16 @@ li {
     line-height: 40px;
 }
 
-.modal-header {
-  background-color: red;
+.modal-header, .modal-footer {
+  background-color: #dc3545;
+}
+
+#modalClose {
+  color: white;
+  opacity: 1;
+}
+
+.modal-dialog {
+  margin-top: 40%;
+  margin-bottom: 40%;
 }
