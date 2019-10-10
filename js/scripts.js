@@ -110,7 +110,7 @@ $(document).ready(function () {
         console.log("Taxes: " + taxedAmount);
         let taxedTotal = (parseFloat(subtotal) + parseFloat(taxedAmount));
         console.log("Taxed total: " + taxedTotal);
-        $("#total").html("<p>" + "$" + taxedTotal + "</p>");
+        $("#total").html("<p>" + "$" + taxedTotal.toFixed(2) + "</p>");
         console.log("subtotal array at pay: " + subtotalArray);
     });
 
@@ -128,7 +128,7 @@ $(document).ready(function () {
         let taxedAmount = 0;
         $("#taxes").html("<p>" + "$" + taxedAmount.toFixed(2) + "</p>");
         let taxedTotal = (subtotal * washingtonTax).toFixed(2);
-        $("#total").html("<p>" + "$" + taxedTotal + "</p>");
+        $("#total").html("<p>" + "$" + taxedTotal.toFixed(2) + "</p>");
         console.log("subtotal array at reset: " + subtotalArray);
     });
 });
