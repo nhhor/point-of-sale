@@ -28,7 +28,11 @@ $(document).ready(function () {
         $(".items").append("<li class='.menuItem' style='list-style-type: none';><span> <i class='fas fa-trash'></i> </span>" + "Caldo de Lengua - " + "$" + caldoDeLenguaPrice + "</li>");
         subtotalArray.push(caldoDeLenguaPrice);
         console.log("updated cart: " + subtotalArray);
-        $("#myModal").modal();
+        // $("#myModal").modal();
+        $('#myModal').modal('show');
+        setTimeout(function() {
+          $('#myModal').modal('hide');
+        }, 1000);
 
     });
     let caldoDeResClick = $("#caldoDeRes").click(function (food) {
@@ -37,6 +41,10 @@ $(document).ready(function () {
         subtotalArray.push(caldoDeResPrice);
         console.log("updated cart: " + subtotalArray);
         $("#myModal").modal();
+        $('#myModal').modal('show');
+        setTimeout(function() {
+          $('#myModal').modal('hide');
+        }, 1000);
 
     });
     let chipsAndSalsaClick = $("#chipsAndSalsa").click(function (food) {
@@ -45,6 +53,10 @@ $(document).ready(function () {
         subtotalArray.push(chipsAndSalsaPrice);
         console.log("updated cart: " + subtotalArray);
         $("#myModal").modal();
+        $('#myModal').modal('show');
+        setTimeout(function() {
+          $('#myModal').modal('hide');
+        }, 1000);
 
     });
     let alPastorBurritoClick = $("#alPastorBurrito").click(function (food) {
@@ -53,6 +65,10 @@ $(document).ready(function () {
         subtotalArray.push(alPastorBurritoPrice);
         console.log("updated cart: " + subtotalArray);
         $("#myModal").modal();
+        $('#myModal').modal('show');
+        setTimeout(function() {
+          $('#myModal').modal('hide');
+        }, 1000);
 
     });
     let beefEnchiladaClick = $("#beefEnchilada").click(function (food) {
@@ -61,6 +77,10 @@ $(document).ready(function () {
         subtotalArray.push(beefEnchiladaPrice);
         console.log("updated cart: " + subtotalArray);
         $("#myModal").modal();
+        $('#myModal').modal('show');
+        setTimeout(function() {
+          $('#myModal').modal('hide');
+        }, 1000);
 
     });
     let alPastorTacoClick = $("#alPastorTaco").click(function (food) {
@@ -69,6 +89,10 @@ $(document).ready(function () {
         subtotalArray.push(alPastorTacoPrice);
         console.log("updated cart: " + subtotalArray);
         $("#myModal").modal();
+        $('#myModal').modal('show');
+        setTimeout(function() {
+          $('#myModal').modal('hide');
+        }, 1000);
 
     });
     let beefChimichangaClick = $("#beefChimichanga").click(function (food) {
@@ -77,6 +101,10 @@ $(document).ready(function () {
         subtotalArray.push(beefChimicangaPrice);
         console.log("updated cart: " + subtotalArray);
         $("#myModal").modal();
+        $('#myModal').modal('show');
+        setTimeout(function() {
+          $('#myModal').modal('hide');
+        }, 1000);
 
     });
     let cheeseQuesadillaClick = $("#cheeseQuesadilla").click(function (food) {
@@ -85,6 +113,10 @@ $(document).ready(function () {
         subtotalArray.push(cheeseQuesadillaPrice);
         console.log("updated cart: " + subtotalArray);
         $("#myModal").modal();
+        $('#myModal').modal('show');
+        setTimeout(function() {
+          $('#myModal').modal('hide');
+        }, 1000);
 
     });
     let frutasConChileClick = $("#frutasConChile").click(function (food) {
@@ -93,6 +125,10 @@ $(document).ready(function () {
         subtotalArray.push(fruitasConChilePrice);
         console.log("updated cart: " + subtotalArray);
         $("#myModal").modal();
+        $('#myModal').modal('show');
+        setTimeout(function() {
+          $('#myModal').modal('hide');
+        }, 1000);
 
     });
 
